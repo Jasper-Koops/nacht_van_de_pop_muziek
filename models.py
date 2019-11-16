@@ -22,7 +22,7 @@ class FakePerson:
         opening = "Wat een {} nummer! ".format(random.choice(praises))
 
         what = ["soundtrack", "achtergrondmuziek", "muziek", "herinnering"]
-        of_what = ["studententijd", "huwelijk", "vakantie", "huwelijksreis"]
+        of_what = ["studententijd.", "huwelijk.", "vakantie.", "huwelijksreis."]
 
         middle = "De {} van mijn {}".format(
             random.choice(what), random.choice(of_what)
