@@ -6,6 +6,46 @@ class FakePerson:
         self.first_name = self.generate_first_name()
         self.last_name = self.generate_last_name()
         self.email = self.generate_email()
+        self.story = self.generate_story('Gorillaz')
+
+    def generate_story(self, artist):
+        praises = [
+            "fantastisch",
+            "geweldig",
+            "heerlijk",
+            "heel erg fijn",
+            "awesome",
+            "dijk van",
+            "ongelooflijk lekker",
+            "ongelooflijk",
+        ]
+        opening = "Wat een {} nummer! ".format(random.choice(praises))
+
+        what = ["soundtrack", "achtergrondmuziek", "muziek", "herinnering"]
+        of_what = ["studententijd", "huwelijk", "vakantie", "huwelijksreis"]
+
+        middle = "De {} van mijn {}".format(
+            random.choice(what), random.choice(of_what)
+        )
+        finishers = [
+            'weten mij hier nog steeds naar terug te brengen',
+            'hebben zichzelf hierna nooit meer overtroffen',
+            'hebben hun niveau nooit meer gehaald',
+            'laten hiermee horen wat ze kunnen',
+            'krijgen bij mij thuis nog steeds de voeten van de vloer bij mij thuis'
+        ]
+        closing_statement = 'En de {} {}'.format(artist, random.choice(finishers))
+
+        end_choices = [
+            "Dit nummer mag zeker niet ontbreken",
+            "Rock on!",
+            "Geweldig!",
+            "Een geweldig nummer van een gouden plaat!",
+            "Kom er maar in!",
+            "Ik blijf hem nog eeuwen draaien!",
+            "Een klassieker!",
+        ]
+        return opening + middle + closing_statement + random.choice(end_choices)
 
     def generate_first_name(self):
         with open("first_names") as f:

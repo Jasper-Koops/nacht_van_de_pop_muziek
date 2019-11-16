@@ -6,7 +6,7 @@ from models import FakePerson
 AMOUNT = 150
 
 
-def make_request(pause_min=60, pause_max=180):
+def make_request(pause_min=30, pause_max=90):
     """Uses spoofed headers on url """
     session = requests.Session()
     headers = {
@@ -21,19 +21,25 @@ def make_request(pause_min=60, pause_max=180):
         "nummer": "GORILLAZ+-+STYLO+(2010)",
         "email": fake_person.email,
         "naam": fake_person.full_name,
-        "motivatie": "",
+        "motivatie": fake_person.story,
     }
     pause = random.randint(pause_min, pause_max)
     print("Pausing for {} seconds".format(pause))
     time.sleep(pause)
     print(
-        "Making request as {} {} ({})".format(
-            fake_person.first_name, fake_person.last_name, fake_person.email
+        "Making request as {} {} ({})\n\n{}".format(
+            fake_person.first_name,
+            fake_person.last_name,
+            fake_person.email,
+            fake_person.story,
         )
     )
     response = session.post(url=url, data=data, headers=headers)
     return response
 
 
+requests_made = 0
 for x in range(AMOUNT):
+    requests_made += 1
     make_request()
+    print("Requests made: {}".format(requests_made))
