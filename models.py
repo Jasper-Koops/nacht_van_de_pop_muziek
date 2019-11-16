@@ -39,7 +39,7 @@ class FakePerson:
         closing_statement = "De {} {}".format(artist, random.choice(finishers))
 
         end_choices = [
-            "Dit nummer mag zeker niet ontbreken",
+            "Dit nummer mag zeker niet ontbreken!",
             "Rock on!",
             "Geweldig!",
             "Een geweldig nummer van een gouden plaat!",
