@@ -45,7 +45,7 @@ class FakePerson:
             "Ik blijf hem nog eeuwen draaien!",
             "Een klassieker!",
         ]
-        return opening + middle + closing_statement + random.choice(end_choices)
+        return opening + middle + closing_statement + " " + random.choice(end_choices)
 
     def generate_first_name(self):
         with open("first_names") as f:
