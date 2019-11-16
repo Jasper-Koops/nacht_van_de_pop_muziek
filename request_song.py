@@ -1,12 +1,12 @@
 import requests
 import random
 import time
-from .objects import FakePerson
+from models import FakePerson
 
-AMOUNT = 20
+AMOUNT = 150
 
 
-def make_request(pause_min=30, pause_max=60):
+def make_request(pause_min=60, pause_max=180):
     """Uses spoofed headers on url """
     session = requests.Session()
     headers = {
@@ -16,7 +16,7 @@ def make_request(pause_min=30, pause_max=60):
         + " q=0.9,image/webp,*/*;q=0.8",
     }
     url = "https://www.ntr.nl/dynamic/nachtvandepopmuziek/aanvraag-iframe.php"
-    fake_person = FakePerson("Stylo", "Gorillaz", 2010)
+    fake_person = FakePerson()
     data = {
         "nummer": "GORILLAZ+-+STYLO+(2010)",
         "email": fake_person.email,
