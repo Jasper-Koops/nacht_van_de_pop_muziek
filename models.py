@@ -21,13 +21,25 @@ class FakePerson:
         ]
         opening = "Wat een {} nummer! ".format(random.choice(praises))
 
-        what = ["soundtrack", "achtergrondmuziek", "muziek", "herinnering"]
+        what = [
+            "soundtrack",
+            "achtergrondmuziek",
+            "muziek",
+            "herinnering",
+            "een terugreis",
+            "een greep uit",
+            "ultieme herinnering aan",
+            "reden dat ik nog altijd van deze band houd",
+            "oorzaak",
+        ]
         of_what = [
             "studententijd.",
             "huwelijk.",
             "vakantie.",
             "huwelijksreis.",
             "Eerste dans als getrouwd stel.",
+            "van mijn zomergevoel.",
+            "blijde stemming, elke keer opnieuw."
         ]
 
         middle = "De {} van mijn {}".format(
@@ -43,6 +55,7 @@ class FakePerson:
             "Wat een helden!",
             "Heb hierop m'n toenmalige vriendin en nu vrouw ten huwelijk gevraagd.",
             "Nummer draaide na geboorte kind",
+            "Kan niet wachten om volume omhoog te gooien en lekker los te gaan op deze geweldige plaat!",
         ]
         closing_statement = "De {} {}".format(artist, random.choice(finishers))
 
