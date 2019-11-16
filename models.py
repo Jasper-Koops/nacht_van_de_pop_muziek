@@ -6,7 +6,7 @@ class FakePerson:
         self.first_name = self.generate_first_name()
         self.last_name = self.generate_last_name()
         self.email = self.generate_email()
-        self.story = self.generate_story('Gorillaz')
+        self.story = self.generate_story("Gorillaz")
 
     def generate_story(self, artist):
         praises = [
@@ -28,13 +28,15 @@ class FakePerson:
             random.choice(what), random.choice(of_what)
         )
         finishers = [
-            'weten mij hier nog steeds naar terug te brengen',
-            'hebben zichzelf hierna nooit meer overtroffen',
-            'hebben hun niveau nooit meer gehaald',
-            'laten hiermee horen wat ze kunnen',
-            'krijgen bij mij thuis nog steeds de voeten van de vloer bij mij thuis'
+            "weten mij hier nog steeds naar terug te brengen",
+            "hebben zichzelf hierna nooit meer overtroffen",
+            "hebben hun niveau nooit meer gehaald",
+            "laten hiermee horen wat ze kunnen",
+            "krijgen bij mij thuis nog steeds de voeten van de vloer bij mij thuis",
+            ", man! Ik kan geen genoeg van ze krijgen!",
+            "Wat een helden!",
         ]
-        closing_statement = 'En de {} {}'.format(artist, random.choice(finishers))
+        closing_statement = "De {} {}".format(artist, random.choice(finishers))
 
         end_choices = [
             "Dit nummer mag zeker niet ontbreken",
@@ -45,7 +47,15 @@ class FakePerson:
             "Ik blijf hem nog eeuwen draaien!",
             "Een klassieker!",
         ]
-        return opening + middle + closing_statement + " " + random.choice(end_choices)
+        return (
+            opening
+            + " "
+            + middle
+            + " "
+            + closing_statement
+            + " "
+            + random.choice(end_choices)
+        )
 
     def generate_first_name(self):
         with open("first_names") as f:
