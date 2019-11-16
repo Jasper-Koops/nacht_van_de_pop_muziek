@@ -41,6 +41,8 @@ class FakePerson:
             "krijgen bij mij thuis nog steeds de voeten van de vloer bij mij thuis",
             ", man! Ik kan geen genoeg van ze krijgen!",
             "Wat een helden!",
+            "Heb hierop m'n toenmalige vriendin en nu vrouw ten huwelijk gevraagd.",
+            "Nummer draaide na geboorte kind",
         ]
         closing_statement = "De {} {}".format(artist, random.choice(finishers))
 
