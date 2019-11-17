@@ -6,7 +6,7 @@ class FakePerson:
         self.first_name = self.generate_first_name()
         self.last_name = self.generate_last_name()
         self.email = self.generate_email()
-        self.story = self.generate_story("Gorillaz")
+        self.story = self.generate_story("Arcade Fire")
 
     def generate_story(self, artist):
         praises = [

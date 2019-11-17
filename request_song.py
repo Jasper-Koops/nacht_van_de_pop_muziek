@@ -6,7 +6,7 @@ from models import FakePerson
 AMOUNT = 150
 
 
-def make_request(pause_min=30, pause_max=90):
+def make_request(pause_min=20, pause_max=120):
     """Uses spoofed headers on url """
     session = requests.Session()
     headers = {
@@ -18,7 +18,7 @@ def make_request(pause_min=30, pause_max=90):
     url = "https://www.ntr.nl/dynamic/nachtvandepopmuziek/aanvraag-iframe.php"
     fake_person = FakePerson()
     data = {
-        "nummer": "GORILLAZ+-+STYLO+(2010)",
+        "nummer": "ARCADE+FIRE+-+THE+SUBURBS",
         "email": fake_person.email,
         "naam": fake_person.full_name,
         "motivatie": fake_person.story,
